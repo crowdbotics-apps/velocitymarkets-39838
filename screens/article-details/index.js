@@ -1,7 +1,9 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { useState, useEffect } from "react";
 import { Text, View, StyleSheet, Image, ScrollView, TextInput, Pressable } from "react-native";
 
 const ArticleDetails = () => {
+  const navigation = useNavigation();
   const [comment, setComment] = useState("");
   const [article, setArticle] = useState({});
   const [comments, setComments] = useState([]);
@@ -32,7 +34,9 @@ const ArticleDetails = () => {
   }, []);
   return <View style={styles.container}>
       <ScrollView>
-        <View style={styles.articleContainer}>
+        <Pressable onPress={() => {
+        navigation.navigate("paymentMethods");
+      }}><View style={styles.articleContainer}>
           <View style={styles.imageContainer}>
             <Image style={styles.articleImage} source={article.image} />
           </View>
@@ -54,7 +58,7 @@ const ArticleDetails = () => {
               </Text>
             </View>
           </View>
-        </View>
+        </View></Pressable>
         <View style={styles.commentsContainer}>
           <View style={styles.commentsHeader}>
             <Text style={styles.commentsHeaderText}>Comments</Text>
