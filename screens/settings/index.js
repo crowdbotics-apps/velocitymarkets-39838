@@ -1,10 +1,15 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import * as React from "react";
 import { Text, View, Image, StyleSheet } from "react-native";
 
 const Settings = () => {
+  const navigation = useNavigation();
   return <View style={styles.container}>
 
-      <View style={styles.mainSection}>
+      <Pressable onPress={() => {
+      navigation.navigate("userProfile");
+    }}><View style={styles.mainSection}>
         <View style={styles.faqSupport}>
           <Image style={styles.faqIcon} source={require("./assets/faq.png")} />
           <Text style={styles.faqText}>FAQ&apos;s</Text>
@@ -39,7 +44,7 @@ const Settings = () => {
           <Image style={styles.inviteFriendsIcon} source={require("./assets/abouticon.png")} />
           <Text style={styles.inviteFriendsText}>About Us</Text>
         </View>
-      </View>
+      </View></Pressable>
     </View>;
 };
 
