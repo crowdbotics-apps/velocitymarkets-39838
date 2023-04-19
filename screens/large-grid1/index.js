@@ -1,35 +1,15 @@
-import { useNavigation } from "@react-navigation/native";
-import { Pressable } from "react-native";
-import { Text } from "react-native";
 import React from "react";
 import { View, StyleSheet, ScrollView } from "react-native";
 
 const LargeGrid = () => {
-  const navigation = useNavigation();
   return <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.gridContainer}>
-        <Pressable onPress={() => {
-        navigation.navigate("Login");
-      }}><View style={styles.row}>
-          <View style={styles.col}>
-            {
-              /* YOUR CODE HERE */
-            }
-          <Text style={styles.cALTSMHe}>Login</Text></View>
-          <View style={styles.col}>
-            {
-              /* YOUR CODE HERE */
-            }
-          </View>
-        </View></Pressable>
         <View style={styles.row}>
-          <Pressable onPress={() => {
-          navigation.navigate("login");
-        }}><View style={styles.col}>
+          <View style={styles.col}>
             {
-              /* YOUR CODE HERE */
-            }
-          </View></Pressable>
+            /* YOUR CODE HERE */
+          }
+          </View>
           <View style={styles.col}>
             {
             /* YOUR CODE HERE */
@@ -42,13 +22,23 @@ const LargeGrid = () => {
             /* YOUR CODE HERE */
           }
           </View>
-          <Pressable onPress={() => {
-          navigation.navigate("largeGrid1");
-        }}><View style={styles.col}>
+          <View style={styles.col}>
             {
-              /* YOUR CODE HERE */
-            }
-          </View></Pressable>
+            /* YOUR CODE HERE */
+          }
+          </View>
+        </View>
+        <View style={styles.row}>
+          <View style={styles.col}>
+            {
+            /* YOUR CODE HERE */
+          }
+          </View>
+          <View style={styles.col}>
+            {
+            /* YOUR CODE HERE */
+          }
+          </View>
         </View>
       </View>
     </ScrollView>;
@@ -81,13 +71,6 @@ const styles = StyleSheet.create({
   textHeading1: {
     fontSize: 20,
     fontWeight: "bold"
-  },
-  cALTSMHe: {
-    width: 100,
-    height: 50,
-    lineHeight: 14,
-    fontSize: 14,
-    borderRadius: 0
   }
 });
 export default LargeGrid;
