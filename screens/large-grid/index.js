@@ -30,18 +30,22 @@ const LargeGrid = () => {
               /* YOUR CODE HERE */
             }
           </View></Pressable>
-          <View style={styles.col}>
+          <Pressable onPress={() => {
+          navigation.navigate("Terms and Conditions");
+        }}><View style={styles.col}>
             {
-            /* YOUR CODE HERE */
-          }
-          </View>
+              /* YOUR CODE HERE */
+            }
+          </View></Pressable>
         </View>
         <View style={styles.row}>
-          <View style={styles.col}>
+          <Pressable onPress={() => {
+          navigation.navigate("Privacy Policy");
+        }}><View style={styles.col}>
             {
-            /* YOUR CODE HERE */
-          }
-          </View>
+              /* YOUR CODE HERE */
+            }
+          </View></Pressable>
           <Pressable onPress={() => {
           navigation.navigate("largeGrid1");
         }}><View style={styles.col}>
