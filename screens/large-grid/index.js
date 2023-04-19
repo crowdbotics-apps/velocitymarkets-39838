@@ -9,7 +9,7 @@ const LargeGrid = () => {
   return <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.gridContainer}>
         <Pressable onPress={() => {
-        navigation.navigate("Login");
+        navigation.navigate("login");
       }}><View style={styles.row}>
           <View style={styles.col}>
             {
