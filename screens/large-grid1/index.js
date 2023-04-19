@@ -1,46 +1,51 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React from "react";
 import { View, StyleSheet, ScrollView } from "react-native";
 
 const LargeGrid = () => {
+  const navigation = useNavigation();
   return <ScrollView contentContainerStyle={styles.container}>
-      <View style={styles.gridContainer}>
+      <Pressable onPress={() => {
+      navigation.navigate("articleDetails");
+    }}><View style={styles.gridContainer}>
         <View style={styles.row}>
           <View style={styles.col}>
             {
-            /* YOUR CODE HERE */
-          }
+              /* YOUR CODE HERE */
+            }
           </View>
           <View style={styles.col}>
             {
-            /* YOUR CODE HERE */
-          }
+              /* YOUR CODE HERE */
+            }
           </View>
         </View>
         <View style={styles.row}>
           <View style={styles.col}>
             {
-            /* YOUR CODE HERE */
-          }
+              /* YOUR CODE HERE */
+            }
           </View>
           <View style={styles.col}>
             {
-            /* YOUR CODE HERE */
-          }
+              /* YOUR CODE HERE */
+            }
           </View>
         </View>
         <View style={styles.row}>
           <View style={styles.col}>
             {
-            /* YOUR CODE HERE */
-          }
+              /* YOUR CODE HERE */
+            }
           </View>
           <View style={styles.col}>
             {
-            /* YOUR CODE HERE */
-          }
+              /* YOUR CODE HERE */
+            }
           </View>
         </View>
-      </View>
+      </View></Pressable>
     </ScrollView>;
 };
 
