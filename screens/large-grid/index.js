@@ -22,22 +22,24 @@ const LargeGrid = () => {
             }
           </View>
         </View></Pressable>
-        <View style={styles.row}>
+        <Pressable onPress={() => {
+        navigation.navigate("supportSendFeedback");
+      }}><View style={styles.row}>
           <Pressable onPress={() => {
-          navigation.navigate("login");
-        }}><View style={styles.col}>
+            navigation.navigate("login");
+          }}><View style={styles.col}>
             {
-              /* YOUR CODE HERE */
-            }
+                /* YOUR CODE HERE */
+              }
           </View></Pressable>
           <Pressable onPress={() => {
-          navigation.navigate("Terms and Conditions");
-        }}><View style={styles.col}>
+            navigation.navigate("Terms and Conditions");
+          }}><View style={styles.col}>
             {
-              /* YOUR CODE HERE */
-            }
+                /* YOUR CODE HERE */
+              }
           </View></Pressable>
-        </View>
+        </View></Pressable>
         <View style={styles.row}>
           <Pressable onPress={() => {
           navigation.navigate("Privacy Policy");
