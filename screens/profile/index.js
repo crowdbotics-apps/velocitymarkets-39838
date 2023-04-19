@@ -1,3 +1,5 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React from "react";
 import { ScrollView, Text, View, StyleSheet, TouchableHighlight, Image, TextInput } from "react-native";
 
@@ -6,8 +8,11 @@ const pressed = () => {
 };
 
 const Profile = () => {
+  const navigation = useNavigation();
   return <ScrollView>
-      <View style={styles.mainContainer}>
+      <Pressable onPress={() => {
+      navigation.navigate("Untitled16");
+    }}><View style={styles.mainContainer}>
         <View>
           <View style={styles.headerContainer}>
             <ProfileImage />
@@ -42,7 +47,7 @@ const Profile = () => {
             Save
           </Button>
         </View>
-      </View>
+      </View></Pressable>
     </ScrollView>;
 };
 
